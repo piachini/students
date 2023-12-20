@@ -32,7 +32,7 @@ const getStudentById = (req, res) => {
     pool.query( queries.getStudentById, [id], (error, results) => {
         if (error) throw error;
         if (!results.rows.length) {
-            res.status(404),send("Student not found");
+            res.status(404).send("Student not found");
         } else
         res.status(200).json(results.rows);
     })
@@ -45,7 +45,7 @@ const updateStudentName = (req, res) => {
     pool.query( queries.getStudentById, [id], (error, results) => {
         if (error) throw error;
         if (!results.rows.length) {
-            res.status(404),send("Student not found");
+            res.status(404).send("Student not found");
         } else {
             pool.query(queries.updateStudentName, [name, id], (error, results) => {
                 if (error) throw error;
