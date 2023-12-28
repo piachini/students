@@ -1,0 +1,1776 @@
+[
+    {
+        "id": "fe9456b538bbe3b7",
+        "type": "http request",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://localhost:3000/api/v1/students/",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 350,
+        "y": 140,
+        "wires": [
+            [
+                "4639fb902bd6ef15"
+            ]
+        ]
+    },
+    {
+        "id": "4639fb902bd6ef15",
+        "type": "ui_table",
+        "z": "22796f36e08a73cf",
+        "group": "06208909edd4a805",
+        "name": "Elenco Studenti",
+        "order": 1,
+        "width": 6,
+        "height": "10",
+        "columns": [
+            {
+                "field": "name",
+                "title": "Nome",
+                "width": "38%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "email",
+                "title": "Email",
+                "width": "38%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "year",
+                "title": "Anno",
+                "width": "25%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 1,
+        "cts": true,
+        "x": 540,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ce6da5b5cc30242c",
+        "type": "ui_button",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "group": "88bb0a460e155539",
+        "order": 2,
+        "width": "3",
+        "height": 1,
+        "passthru": false,
+        "label": "Ricarica",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "refresh",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 180,
+        "y": 140,
+        "wires": [
+            [
+                "fe9456b538bbe3b7"
+            ]
+        ]
+    },
+    {
+        "id": "f6ebe5710289cd29",
+        "type": "ui_button",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "group": "28845413e3cd0918",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Elimina",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "delete",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 160,
+        "y": 1100,
+        "wires": [
+            [
+                "bf6676a34b77b669"
+            ]
+        ]
+    },
+    {
+        "id": "d39a03bfbd647478",
+        "type": "ui_button",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "group": "1d17b8332841bf61",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Nuovo ...",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "person_add",
+        "payload": "Nuovo Studente",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 360,
+        "wires": [
+            [
+                "ba60875236c1f619",
+                "3d53d1b62674407e"
+            ]
+        ]
+    },
+    {
+        "id": "f2d23954f0957936",
+        "type": "http request",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://localhost:3000/api/v1/students/{{{payload.id}}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 610,
+        "y": 620,
+        "wires": [
+            [
+                "6bc0d196ee0c403c"
+            ]
+        ]
+    },
+    {
+        "id": "3509b2960fa79599",
+        "type": "ui_text",
+        "z": "22796f36e08a73cf",
+        "group": "f08d64119fec607e",
+        "order": 4,
+        "width": "4",
+        "height": 1,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 1530,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "f23a6b3a1708dc75",
+        "type": "ui_text",
+        "z": "22796f36e08a73cf",
+        "group": "f08d64119fec607e",
+        "order": 6,
+        "width": "4",
+        "height": "1",
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 1530,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "198182cbbfa8685e",
+        "type": "ui_text",
+        "z": "22796f36e08a73cf",
+        "group": "f08d64119fec607e",
+        "order": 8,
+        "width": "4",
+        "height": "1",
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 1530,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "7f33186d7439e320",
+        "type": "ui_text",
+        "z": "22796f36e08a73cf",
+        "group": "f08d64119fec607e",
+        "order": 10,
+        "width": "4",
+        "height": "1",
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 1530,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "f3ad70f824565322",
+        "type": "change",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[0].name",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 640,
+        "wires": [
+            [
+                "3509b2960fa79599"
+            ]
+        ]
+    },
+    {
+        "id": "349fb7b748f43e35",
+        "type": "change",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[0].email",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 680,
+        "wires": [
+            [
+                "f23a6b3a1708dc75"
+            ]
+        ]
+    },
+    {
+        "id": "271c5174b1fb3423",
+        "type": "change",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[0].year",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 720,
+        "wires": [
+            [
+                "198182cbbfa8685e"
+            ]
+        ]
+    },
+    {
+        "id": "186353a7f30bdefd",
+        "type": "change",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[0].dob",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 760,
+        "wires": [
+            [
+                "c5a49a9bb49f203d"
+            ]
+        ]
+    },
+    {
+        "id": "c5a49a9bb49f203d",
+        "type": "function",
+        "z": "22796f36e08a73cf",
+        "name": "formatDate",
+        "func": "// Assicurati che msg.payload sia una stringa e che corrisponda al formato desiderato\nif (typeof msg.payload === 'string') {\n    // Estrai le parti della data dal payload\n    var parts = msg.payload.split(\"T\")[0].split(\"-\");\n\n    // Crea una nuova stringa con il formato desiderato\n    var formattedDate = parts[2] + \"-\" + parts[1] + \"-\" + parts[0];\n\n    // Imposta il payload del messaggio di output\n    msg.payload = formattedDate;\n} else {\n    // Se il payload non è una stringa, puoi gestire l'errore o semplicemente passare avanti il messaggio\n    node.warn(\"Il payload non è una stringa nel formato atteso.\");\n    return null; // O qualsiasi altro comportamento desideri\n}\n\n// Restituisci il messaggio di output\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1370,
+        "y": 760,
+        "wires": [
+            [
+                "7f33186d7439e320"
+            ]
+        ]
+    },
+    {
+        "id": "6bc0d196ee0c403c",
+        "type": "switch",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Student not found",
+                "vt": "str"
+            },
+            {
+                "t": "neq",
+                "v": "Student not found",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 990,
+        "y": 620,
+        "wires": [
+            [
+                "4665320b2e2905d3"
+            ],
+            [
+                "f3ad70f824565322",
+                "349fb7b748f43e35",
+                "271c5174b1fb3423",
+                "186353a7f30bdefd",
+                "f7d51469517ca290",
+                "5a2583f97c1795cd",
+                "49e55122f74c16d0"
+            ]
+        ]
+    },
+    {
+        "id": "eccaa218f6e13e86",
+        "type": "ui_button",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "group": "1d17b8332841bf61",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Elenco studenti",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "people",
+        "payload": "Elenco Studenti",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 160,
+        "y": 60,
+        "wires": [
+            [
+                "fe9456b538bbe3b7",
+                "1cb3e763afd7555b"
+            ]
+        ]
+    },
+    {
+        "id": "cd129ac837f17344",
+        "type": "ui_button",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "group": "1d17b8332841bf61",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Cerca ...",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "search",
+        "payload": "Ricerca Studente",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 180,
+        "y": 620,
+        "wires": [
+            [
+                "3f0c795aa64f199d",
+                "f2d20281a11ede0f"
+            ]
+        ]
+    },
+    {
+        "id": "8a272ada46656574",
+        "type": "ui_button",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "group": "88bb0a460e155539",
+        "order": 1,
+        "width": "3",
+        "height": 1,
+        "passthru": false,
+        "label": "Home",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "home",
+        "payload": "Home",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 370,
+        "y": 20,
+        "wires": [
+            [
+                "1cb3e763afd7555b"
+            ]
+        ]
+    },
+    {
+        "id": "4a60c0eacde80ff4",
+        "type": "ui_button",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "group": "28845413e3cd0918",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Cambia nome",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "edit",
+        "payload": "Cambio Nome",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 1020,
+        "wires": [
+            [
+                "a10c023ff64daa05",
+                "038a1ef60511ef83"
+            ]
+        ]
+    },
+    {
+        "id": "3d1bad1cd33a748c",
+        "type": "ui_text",
+        "z": "22796f36e08a73cf",
+        "group": "f08d64119fec607e",
+        "order": 2,
+        "width": "4",
+        "height": "1",
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 1530,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "1cb3e763afd7555b",
+        "type": "ui_ui_control",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "events": "all",
+        "x": 520,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3d53d1b62674407e",
+        "type": "ui_form",
+        "z": "22796f36e08a73cf",
+        "name": "form-new",
+        "label": "Aggiungi Studente",
+        "group": "95fe4920b46d8ceb",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "options": [
+            {
+                "label": "Nome",
+                "value": "name",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Email",
+                "value": "email",
+                "type": "email",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Anno",
+                "value": "year",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Data nascita",
+                "value": "dob",
+                "type": "date",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "name": "",
+            "email": "",
+            "year": "",
+            "dob": ""
+        },
+        "payload": "",
+        "submit": "Aggiungi",
+        "cancel": "Pulisci campi",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 360,
+        "y": 360,
+        "wires": [
+            [
+                "01bcc6e83b60ef82"
+            ]
+        ]
+    },
+    {
+        "id": "ba60875236c1f619",
+        "type": "ui_ui_control",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "events": "all",
+        "x": 320,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "01bcc6e83b60ef82",
+        "type": "http request",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://localhost:3000/api/v1/students/",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 630,
+        "y": 360,
+        "wires": [
+            [
+                "90871ad3284dd3a3"
+            ]
+        ]
+    },
+    {
+        "id": "90871ad3284dd3a3",
+        "type": "switch",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "[]",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Email already exists",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 810,
+        "y": 360,
+        "wires": [
+            [
+                "f48682e567ed6dba"
+            ],
+            [
+                "7a6ff5598e3e4ff3"
+            ],
+            [
+                "6d50175114ba5f9e"
+            ]
+        ]
+    },
+    {
+        "id": "1ec0bb75592f36f8",
+        "type": "ui_toast",
+        "z": "22796f36e08a73cf",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1210,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "f48682e567ed6dba",
+        "type": "change",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Aggiunto nuovo studente",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 300,
+        "wires": [
+            [
+                "1ec0bb75592f36f8"
+            ]
+        ]
+    },
+    {
+        "id": "399d713984d5ab47",
+        "type": "ui_toast",
+        "z": "22796f36e08a73cf",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1210,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "7a6ff5598e3e4ff3",
+        "type": "change",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Email già in uso",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 360,
+        "wires": [
+            [
+                "399d713984d5ab47"
+            ]
+        ]
+    },
+    {
+        "id": "d4731a3ebbad2118",
+        "type": "ui_toast",
+        "z": "22796f36e08a73cf",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1210,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "6d50175114ba5f9e",
+        "type": "change",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "C'è stato un problema, riprova più tardi",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 420,
+        "wires": [
+            [
+                "d4731a3ebbad2118"
+            ]
+        ]
+    },
+    {
+        "id": "137623e43bb46832",
+        "type": "ui_button",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "group": "95fe4920b46d8ceb",
+        "order": 3,
+        "width": "6",
+        "height": 1,
+        "passthru": false,
+        "label": "Home",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "home",
+        "payload": "Home",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 460,
+        "wires": [
+            [
+                "9957c7e42817d3bf"
+            ]
+        ]
+    },
+    {
+        "id": "9957c7e42817d3bf",
+        "type": "ui_ui_control",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "events": "all",
+        "x": 300,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3f0c795aa64f199d",
+        "type": "ui_ui_control",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "events": "all",
+        "x": 360,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f2d20281a11ede0f",
+        "type": "ui_form",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "label": "Inserisci ID",
+        "group": "74b3da67c51faa4f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "",
+                "value": "id",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "id": ""
+        },
+        "payload": "",
+        "submit": "Cerca",
+        "cancel": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 370,
+        "y": 620,
+        "wires": [
+            [
+                "f2d23954f0957936"
+            ]
+        ]
+    },
+    {
+        "id": "d2a16626df90723f",
+        "type": "ui_toast",
+        "z": "22796f36e08a73cf",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1390,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "4665320b2e2905d3",
+        "type": "change",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Studente non trovato",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 540,
+        "wires": [
+            [
+                "d2a16626df90723f"
+            ]
+        ]
+    },
+    {
+        "id": "f7d51469517ca290",
+        "type": "change",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[0].id",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 800,
+        "wires": [
+            [
+                "3d1bad1cd33a748c"
+            ]
+        ]
+    },
+    {
+        "id": "5a2583f97c1795cd",
+        "type": "change",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Dettaglio Studente",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 600,
+        "wires": [
+            [
+                "fb193a5e578bbfa9"
+            ]
+        ]
+    },
+    {
+        "id": "fb193a5e578bbfa9",
+        "type": "ui_ui_control",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "events": "all",
+        "x": 1360,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a10c023ff64daa05",
+        "type": "ui_ui_control",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "events": "all",
+        "x": 340,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "038a1ef60511ef83",
+        "type": "ui_form",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "label": "Inserisci Nuovo Nome",
+        "group": "7a8aa51d46753502",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "",
+                "value": "name",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "name": ""
+        },
+        "payload": "",
+        "submit": "OK",
+        "cancel": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 360,
+        "y": 1020,
+        "wires": [
+            [
+                "c26b3427986af7f2"
+            ]
+        ]
+    },
+    {
+        "id": "df47d1b0f7584331",
+        "type": "http request",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "method": "PUT",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://localhost:3000/api/v1/students/{{payload.id}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 770,
+        "y": 1020,
+        "wires": [
+            [
+                "45dfee476b3e8835"
+            ]
+        ]
+    },
+    {
+        "id": "c26b3427986af7f2",
+        "type": "function",
+        "z": "22796f36e08a73cf",
+        "name": "makePutPayload",
+        "func": "flow.set(\"name\", msg.payload.name);\n\nconst data = {\n    id : flow.get(\"id\"),\n    name : flow.get(\"name\")\n  };\n\n\n  msg.payload = data;\n  return msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 1020,
+        "wires": [
+            [
+                "df47d1b0f7584331"
+            ]
+        ]
+    },
+    {
+        "id": "49e55122f74c16d0",
+        "type": "function",
+        "z": "22796f36e08a73cf",
+        "name": "setId",
+        "func": "flow.set(\"id\", msg.payload[0].id);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "45dfee476b3e8835",
+        "type": "switch",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Student not found",
+                "vt": "str"
+            },
+            {
+                "t": "neq",
+                "v": "Student not found",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 970,
+        "y": 1020,
+        "wires": [
+            [
+                "d2d72e04a385c050"
+            ],
+            [
+                "88d63dd06e88513d",
+                "b063f5d5eb3b624f"
+            ]
+        ]
+    },
+    {
+        "id": "6eee2a64c1d8eb53",
+        "type": "ui_toast",
+        "z": "22796f36e08a73cf",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1450,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "d2d72e04a385c050",
+        "type": "change",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Studente non trovato",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1160,
+        "y": 980,
+        "wires": [
+            [
+                "6eee2a64c1d8eb53"
+            ]
+        ]
+    },
+    {
+        "id": "88d63dd06e88513d",
+        "type": "change",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "name",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1160,
+        "y": 1040,
+        "wires": [
+            [
+                "3509b2960fa79599"
+            ]
+        ]
+    },
+    {
+        "id": "b063f5d5eb3b624f",
+        "type": "change",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Dettaglio Studente",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1160,
+        "y": 1080,
+        "wires": [
+            [
+                "edea1fe7b28d93ca"
+            ]
+        ]
+    },
+    {
+        "id": "edea1fe7b28d93ca",
+        "type": "ui_ui_control",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "events": "all",
+        "x": 1340,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e5e46cb0a7fef6c1",
+        "type": "ui_button",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "group": "28845413e3cd0918",
+        "order": 4,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Home",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "home",
+        "payload": "Home",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1530,
+        "y": 860,
+        "wires": [
+            [
+                "c0fb84b1d87bc4b7"
+            ]
+        ]
+    },
+    {
+        "id": "c0fb84b1d87bc4b7",
+        "type": "ui_ui_control",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "events": "all",
+        "x": 1740,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6672467bc3cb6384",
+        "type": "ui_button",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "group": "28845413e3cd0918",
+        "order": 5,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Elenco",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "people",
+        "payload": "Elenco Studenti",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1530,
+        "y": 900,
+        "wires": [
+            [
+                "c0fb84b1d87bc4b7"
+            ]
+        ]
+    },
+    {
+        "id": "bf6676a34b77b669",
+        "type": "function",
+        "z": "22796f36e08a73cf",
+        "name": "makeDeletePayload",
+        "func": "\nconst data = {\n    id : flow.get(\"id\")\n  };\n\n  msg.payload = data;\n  return msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 1100,
+        "wires": [
+            [
+                "7598175ad6e38408"
+            ]
+        ]
+    },
+    {
+        "id": "7598175ad6e38408",
+        "type": "http request",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "method": "DELETE",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://localhost:3000/api/v1/students/{{payload.id}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 590,
+        "y": 1100,
+        "wires": [
+            [
+                "31c1ee068f83c8b5",
+                "bf8219791dbd907b"
+            ]
+        ]
+    },
+    {
+        "id": "9dc8ceb3738f06ba",
+        "type": "ui_button",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "group": "28845413e3cd0918",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Nuova ricerca",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "search",
+        "payload": "Ricerca Studente",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 180,
+        "y": 940,
+        "wires": [
+            [
+                "a10c023ff64daa05"
+            ]
+        ]
+    },
+    {
+        "id": "be04d0abc3846e4f",
+        "type": "ui_button",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "group": "74b3da67c51faa4f",
+        "order": 3,
+        "width": "6",
+        "height": 1,
+        "passthru": false,
+        "label": "Indietro",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "arrow_back",
+        "payload": "Home",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 200,
+        "y": 700,
+        "wires": [
+            [
+                "3f0c795aa64f199d"
+            ]
+        ]
+    },
+    {
+        "id": "b5a1cf165947e4c3",
+        "type": "ui_text",
+        "z": "22796f36e08a73cf",
+        "group": "f08d64119fec607e",
+        "order": 3,
+        "width": "2",
+        "height": 1,
+        "name": "",
+        "label": "Nome",
+        "format": "",
+        "layout": "row-left",
+        "className": "",
+        "x": 1670,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "6ace6b4618e0a927",
+        "type": "ui_text",
+        "z": "22796f36e08a73cf",
+        "group": "f08d64119fec607e",
+        "order": 5,
+        "width": "2",
+        "height": "1",
+        "name": "",
+        "label": "Email",
+        "format": "",
+        "layout": "row-left",
+        "className": "",
+        "x": 1670,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "1fe34ddfaecba1c7",
+        "type": "ui_text",
+        "z": "22796f36e08a73cf",
+        "group": "f08d64119fec607e",
+        "order": 7,
+        "width": "2",
+        "height": "1",
+        "name": "",
+        "label": "Anno",
+        "format": "",
+        "layout": "row-left",
+        "className": "",
+        "x": 1670,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "6535e1f1021c8590",
+        "type": "ui_text",
+        "z": "22796f36e08a73cf",
+        "group": "f08d64119fec607e",
+        "order": 9,
+        "width": "2",
+        "height": "1",
+        "name": "",
+        "label": "Data nascita",
+        "format": "",
+        "layout": "row-left",
+        "className": "",
+        "x": 1730,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "a3a6d67eb95d4a38",
+        "type": "ui_text",
+        "z": "22796f36e08a73cf",
+        "group": "f08d64119fec607e",
+        "order": 1,
+        "width": "2",
+        "height": "1",
+        "name": "",
+        "label": "ID",
+        "format": "",
+        "layout": "row-left",
+        "className": "",
+        "x": 1670,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "31c1ee068f83c8b5",
+        "type": "change",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Ricerca Studente",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 800,
+        "y": 1100,
+        "wires": [
+            [
+                "4ccfe3848a02886d"
+            ]
+        ]
+    },
+    {
+        "id": "4ccfe3848a02886d",
+        "type": "ui_ui_control",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "events": "all",
+        "x": 980,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "397ec45a7e3ea314",
+        "type": "ui_toast",
+        "z": "22796f36e08a73cf",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1010,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "bf8219791dbd907b",
+        "type": "change",
+        "z": "22796f36e08a73cf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Studente eliminato dall'elenco",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 800,
+        "y": 1160,
+        "wires": [
+            [
+                "397ec45a7e3ea314"
+            ]
+        ]
+    },
+    {
+        "id": "06208909edd4a805",
+        "type": "ui_group",
+        "name": "Data",
+        "tab": "d002c1db81e3b186",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "88bb0a460e155539",
+        "type": "ui_group",
+        "name": "Functions",
+        "tab": "d002c1db81e3b186",
+        "order": 2,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "28845413e3cd0918",
+        "type": "ui_group",
+        "name": "Functions",
+        "tab": "3ec2f1a36675a056",
+        "order": 2,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1d17b8332841bf61",
+        "type": "ui_group",
+        "name": "App Studenti",
+        "tab": "a3cfa89f76699f5b",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f08d64119fec607e",
+        "type": "ui_group",
+        "name": "Attributes",
+        "tab": "3ec2f1a36675a056",
+        "order": 1,
+        "disp": false,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "95fe4920b46d8ceb",
+        "type": "ui_group",
+        "name": "Form",
+        "tab": "23c8418c0d3649df",
+        "order": 2,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "74b3da67c51faa4f",
+        "type": "ui_group",
+        "name": "Form",
+        "tab": "a38bd53e1599c1fa",
+        "order": 2,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7a8aa51d46753502",
+        "type": "ui_group",
+        "name": "Form",
+        "tab": "bf04bd986774989f",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d002c1db81e3b186",
+        "type": "ui_tab",
+        "name": "Elenco Studenti",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3ec2f1a36675a056",
+        "type": "ui_tab",
+        "name": "Dettaglio Studente",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a3cfa89f76699f5b",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "23c8418c0d3649df",
+        "type": "ui_tab",
+        "name": "Nuovo Studente",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a38bd53e1599c1fa",
+        "type": "ui_tab",
+        "name": "Ricerca Studente",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "bf04bd986774989f",
+        "type": "ui_tab",
+        "name": "Cambio Nome",
+        "icon": "dashboard",
+        "order": 6,
+        "disabled": false,
+        "hidden": false
+    }
+]
