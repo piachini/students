@@ -3,7 +3,7 @@ const getStudents = "SELECT * FROM students";
 
 const addStudent = "INSERT INTO students (name, email, year, dob) VALUES ($1, $2, $3, $4)";
 
-const getStudentById = "SELECT * FROM students WHERE ID = $1";
+const getStudentById = "SELECT * FROM students WHERE id = $1";
 
 const updateStudentName = "UPDATE students SET name = $1 WHERE id = $2";
 
