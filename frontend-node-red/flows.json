@@ -1,5 +1,262 @@
 [
     {
+        "id": "22796f36e08a73cf",
+        "type": "tab",
+        "label": "Students",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a3cfa89f76699f5b",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "defedca86d1b91b8",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "none",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "1d17b8332841bf61",
+        "type": "ui_group",
+        "name": "App Studenti",
+        "tab": "a3cfa89f76699f5b",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d002c1db81e3b186",
+        "type": "ui_tab",
+        "name": "Elenco Studenti",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "88bb0a460e155539",
+        "type": "ui_group",
+        "name": "Functions",
+        "tab": "d002c1db81e3b186",
+        "order": 2,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3ec2f1a36675a056",
+        "type": "ui_tab",
+        "name": "Dettaglio Studente",
+        "icon": "dashboard",
+        "order": 5,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f08d64119fec607e",
+        "type": "ui_group",
+        "name": "Attributes",
+        "tab": "3ec2f1a36675a056",
+        "order": 1,
+        "disp": false,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "28845413e3cd0918",
+        "type": "ui_group",
+        "name": "Functions",
+        "tab": "3ec2f1a36675a056",
+        "order": 2,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a38bd53e1599c1fa",
+        "type": "ui_tab",
+        "name": "Ricerca Studente",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "74b3da67c51faa4f",
+        "type": "ui_group",
+        "name": "Form",
+        "tab": "a38bd53e1599c1fa",
+        "order": 2,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "23c8418c0d3649df",
+        "type": "ui_tab",
+        "name": "Nuovo Studente",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "95fe4920b46d8ceb",
+        "type": "ui_group",
+        "name": "Form",
+        "tab": "23c8418c0d3649df",
+        "order": 2,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "06208909edd4a805",
+        "type": "ui_group",
+        "name": "Data",
+        "tab": "d002c1db81e3b186",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bf04bd986774989f",
+        "type": "ui_tab",
+        "name": "Cambio Nome",
+        "icon": "dashboard",
+        "order": 6,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7a8aa51d46753502",
+        "type": "ui_group",
+        "name": "Form",
+        "tab": "bf04bd986774989f",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "36e8056d7385d16d",
+        "type": "ui_spacer",
+        "z": "22796f36e08a73cf",
+        "name": "spacer",
+        "group": "95fe4920b46d8ceb",
+        "order": 1,
+        "width": 3,
+        "height": 1
+    },
+    {
         "id": "fe9456b538bbe3b7",
         "type": "http request",
         "z": "22796f36e08a73cf",
@@ -165,7 +422,7 @@
         "method": "GET",
         "ret": "obj",
         "paytoqs": "ignore",
-        "url": "http://localhost:3000/api/v1/students/{{{payload.id}}}",
+        "url": "http://localhost:3000/api/v1/students/?email={{{payload.email}}}",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -891,7 +1148,7 @@
         "type": "ui_form",
         "z": "22796f36e08a73cf",
         "name": "",
-        "label": "Inserisci ID",
+        "label": "Email",
         "group": "74b3da67c51faa4f",
         "order": 1,
         "width": 0,
@@ -899,14 +1156,14 @@
         "options": [
             {
                 "label": "",
-                "value": "id",
-                "type": "number",
+                "value": "email",
+                "type": "email",
                 "required": true,
                 "rows": null
             }
         ],
         "formValue": {
-            "id": ""
+            "email": ""
         },
         "payload": "",
         "submit": "Cerca",
@@ -915,7 +1172,7 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 370,
+        "x": 350,
         "y": 620,
         "wires": [
             [
@@ -1630,147 +1887,5 @@
                 "397ec45a7e3ea314"
             ]
         ]
-    },
-    {
-        "id": "06208909edd4a805",
-        "type": "ui_group",
-        "name": "Data",
-        "tab": "d002c1db81e3b186",
-        "order": 1,
-        "disp": false,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "88bb0a460e155539",
-        "type": "ui_group",
-        "name": "Functions",
-        "tab": "d002c1db81e3b186",
-        "order": 2,
-        "disp": false,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "28845413e3cd0918",
-        "type": "ui_group",
-        "name": "Functions",
-        "tab": "3ec2f1a36675a056",
-        "order": 2,
-        "disp": false,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "1d17b8332841bf61",
-        "type": "ui_group",
-        "name": "App Studenti",
-        "tab": "a3cfa89f76699f5b",
-        "order": 1,
-        "disp": false,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "f08d64119fec607e",
-        "type": "ui_group",
-        "name": "Attributes",
-        "tab": "3ec2f1a36675a056",
-        "order": 1,
-        "disp": false,
-        "width": 6,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "95fe4920b46d8ceb",
-        "type": "ui_group",
-        "name": "Form",
-        "tab": "23c8418c0d3649df",
-        "order": 2,
-        "disp": false,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "74b3da67c51faa4f",
-        "type": "ui_group",
-        "name": "Form",
-        "tab": "a38bd53e1599c1fa",
-        "order": 2,
-        "disp": false,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "7a8aa51d46753502",
-        "type": "ui_group",
-        "name": "Form",
-        "tab": "bf04bd986774989f",
-        "order": 1,
-        "disp": false,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "d002c1db81e3b186",
-        "type": "ui_tab",
-        "name": "Elenco Studenti",
-        "icon": "dashboard",
-        "order": 4,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "3ec2f1a36675a056",
-        "type": "ui_tab",
-        "name": "Dettaglio Studente",
-        "icon": "dashboard",
-        "order": 5,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "a3cfa89f76699f5b",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "23c8418c0d3649df",
-        "type": "ui_tab",
-        "name": "Nuovo Studente",
-        "icon": "dashboard",
-        "order": 2,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "a38bd53e1599c1fa",
-        "type": "ui_tab",
-        "name": "Ricerca Studente",
-        "icon": "dashboard",
-        "order": 3,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "bf04bd986774989f",
-        "type": "ui_tab",
-        "name": "Cambio Nome",
-        "icon": "dashboard",
-        "order": 6,
-        "disabled": false,
-        "hidden": false
     }
 ]

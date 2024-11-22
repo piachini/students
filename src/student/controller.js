@@ -1,11 +1,31 @@
 const pool = require("../../db");
 const queries = require("./queries");
 
+// const getStudents = (req, res) => {
+//     pool.query( queries.getStudents, (error, results) => {
+//         if (error) throw error;
+//         res.status(200).json(results.rows);
+//     })
+// };
+
 const getStudents = (req, res) => {
-    pool.query( queries.getStudents, (error, results) => {
-        if (error) throw error;
-        res.status(200).json(results.rows);
-    })
+    
+    const { email } = req.query; // eventuale parametro di ricerca per email
+
+    if (!email) {
+        pool.query( queries.getStudents, (error, results) => {
+            if (error) throw error;
+            res.status(200).json(results.rows);
+        })
+    } else {
+        pool.query( queries.getStudentByEmail, [email], (error, results) => {
+            if (error) throw error;
+            if (!results.rows.length) {
+                res.status(404).send("Student not found");
+            } else
+            res.status(200).json(results.rows);
+        })
+    }
 };
 
 const addStudent = (req, res) => {
