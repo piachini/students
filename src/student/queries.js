@@ -1,5 +1,5 @@
 
-const getStudents = "SELECT * FROM students";
+const getStudents = "SELECT * FROM students ORDER BY name ASC";
 
 const addStudent = "INSERT INTO students (name, email, year, dob) VALUES ($1, $2, $3, $4)";
 

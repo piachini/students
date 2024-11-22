@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestione Studenti</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gestione Studenti</h1>
+
+    <!-- Sezione per visualizzare gli studenti -->
+    <section id="student-list">
+        <h2>Lista Studenti</h2>
+        <button onclick="fetchStudents()">Aggiorna Lista</button>
+        <table id="studentsTable" border="1">
+          <thead>
+            <tr>
+              <th class="center">ID</th>
+              <th>Nome</th>
+              <th>Email</th>
+              <th class="center">Anno di Corso</th>
+              <th class="center">Data di Nascita</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Le righe degli studenti verranno aggiunte qui -->
+          </tbody>
+        </table>
+    </section>
+      
+
+    <!-- Sezione per aggiungere uno studente -->
+    <section id="add-student">
+        <h2>Aggiungi Studente</h2>
+        <form id="addStudentForm">
+          <input type="text" id="newStudentName" placeholder="Nome Studente" required>
+          <input type="email" id="newStudentEmail" placeholder="Email Studente" required>
+          <input type="number" id="newStudentYear" placeholder="Anno di Corso" min="1" max="6" required>
+          <input type="date" id="newStudentDOB" placeholder="Data di Nascita" required>
+          <button type="submit">Aggiungi</button>
+        </form>
+      </section>
+      
+
+    <!-- Sezione per aggiornare uno studente -->
+    <section id="update-student">
+      <h2>Modifica Nome Studente</h2>
+      <form id="updateStudentForm">
+        <input type="number" id="updateStudentId" placeholder="ID Studente" required>
+        <input type="text" id="updateStudentName" placeholder="Nuovo Nome" required>
+        <button type="submit">Aggiorna</button>
+      </form>
+    </section>
+
+    <!-- Sezione per eliminare uno studente -->
+    <section id="delete-student">
+      <h2>Elimina Studente</h2>
+      <form id="deleteStudentForm">
+        <input type="number" id="deleteStudentId" placeholder="ID Studente" required>
+        <button type="submit">Elimina</button>
+      </form>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
